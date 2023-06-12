@@ -1,4 +1,4 @@
-package timeCounting;
+package seminar1.timeCounting;
 
 import java.time.Duration;
 import java.time.LocalDate;

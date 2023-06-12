@@ -1,4 +1,4 @@
-package timeCounting;
+package seminar1.timeCounting;
 
 import java.text.DateFormat;
 import java.text.ParseException;

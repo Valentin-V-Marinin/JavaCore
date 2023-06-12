@@ -1,4 +1,4 @@
-package timeCounting;
+package seminar1.timeCounting;
 
 public class TimePrinter {
     TimeCounter timeCounter;
