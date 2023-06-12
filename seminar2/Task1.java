@@ -25,7 +25,11 @@ public class Task1 {
 
     public void printArr(int[] arr){
         PrintArray pa = new PrintArray();
-        pa.printArr(arr);
+        if (arr.length > 0) {
+            pa.printArr(arr);
+        } else {
+            System.out.println("Empty array!");
+        }
         System.out.println("This array includes " + countEvenNumbers() + " even number(s).");
     }
 

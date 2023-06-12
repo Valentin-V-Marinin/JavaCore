@@ -8,10 +8,17 @@ public class Task2 {
     private int smaller, biggest;
     private final int[] arrayRandom;
 
+    private final boolean emptyArray;
+
 
     public Task2(int sizeArr) {
-        arrayRandom = new GetRandomArray().createRandomArray(sizeArr);
-        findSmallerBiggestNumber();
+        if (sizeArr > 0) {emptyArray = false;} else {emptyArray = true;}
+        if (!emptyArray) {
+            arrayRandom = new GetRandomArray().createRandomArray(sizeArr);
+            findSmallerBiggestNumber();
+        } else {
+            arrayRandom = null;
+        }
     }
 
     public int[] getArrayRandom() {
@@ -20,7 +27,7 @@ public class Task2 {
 
     private void findSmallerBiggestNumber(){
         for (int i = 0; i < arrayRandom.length; i++) {
-            if (i ==0) {
+            if (i == 0) {
                 smaller = arrayRandom[i];
                 biggest = arrayRandom[i];
             }
@@ -30,9 +37,13 @@ public class Task2 {
     }
 
     public void printTask2(int[] arr){
-        new PrintArray().printArr(arr);
-        System.out.println("Array MAX = " + biggest);
-        System.out.println("Array MIN = " + smaller);
-        System.out.println("The difference is: " + (biggest - smaller) );
+        if (emptyArray) {
+            System.out.println("Empty array!");
+        } else {
+            new PrintArray().printArr(arr);
+            System.out.println("Array MAX = " + biggest);
+            System.out.println("Array MIN = " + smaller);
+            System.out.println("The difference is: " + (biggest - smaller));
+        }
     }
 }

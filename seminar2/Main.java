@@ -6,7 +6,7 @@ public class Main {
         sem2_1.printArr(sem2_1.getArrayRandom());
 
         System.out.println("----------------------------------------------------------------------------------");
-        Task2 sem2_2 = new Task2(12);
+        Task2 sem2_2 = new Task2(8);
         sem2_2.printTask2(sem2_2.getArrayRandom());
 
 
